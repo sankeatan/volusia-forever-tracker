@@ -74,19 +74,45 @@ function renderSummary() {
     return card(name, `${fmtNum(t.acres)} ac`, `${t.count} record${t.count === 1 ? '' : 's'}`, HOLDING_COLORS[name]);
   };
   const other = Object.keys(types).filter((k) => !HOLDING_COLORS[k]);
+  const plural = (n) => `${n} record${n === 1 ? '' : 's'}`;
 
-  document.getElementById('cards').innerHTML = [
-    card('Volusia Forever acquisitions', `${fmtNum(a.acreage_field_total)} ac`, `${a.records} records · $${fmtNum(a.total_investment / 1e6, 1)}M total investment`),
-    ...Object.keys(HOLDING_COLORS).map(typeCard),
-    ...other.map(typeCard),
-    card('Conservation land parcels', fmtNum(summary.conservation_lands.unique_parcels), 'parcel IDs, all public and private conservation owners'),
-  ].join('');
+  // The acquisitions layer mixes Volusia Forever purchases with the earlier Endangered Land Program,
+  // so the headline splits them by the county's FundProgram field instead of adding them together.
+  const programs = Object.entries(a.by_fund_program);
+  const vf = programs.filter(([k]) => k.startsWith('Volusia Forever'));
+  const earlier = programs.filter(([k]) => !k.startsWith('Volusia Forever'));
+  const programCard = (label, list) => {
+    const acres = list.reduce((s, [, v]) => s + v.acres, 0);
+    const count = list.reduce((s, [, v]) => s + v.count, 0);
+    return card(label, `${fmtNum(acres)} ac`, `${plural(count)} · ${list.map(([k]) => esc(k)).join(', ')}`);
+  };
+  const park = a.park_flagged;
+  const parkPrograms = [...new Set(park.records.map((r) => r.program))];
 
-  const programs = Object.entries(a.by_fund_program).map(([k, v]) => `${esc(k)}: ${v.count} records, ${fmtNum(v.acres)} ac`).join('; ');
+  document.getElementById('cards').innerHTML =
+    '<h2 class="cards-h">By program</h2><div class="cards">' +
+    [
+      programCard('Volusia Forever', vf),
+      ...earlier.map(([k, v]) => programCard(k === 'Endangered Land Program' ? 'Endangered Land Program (before Volusia Forever)' : k, [[k, v]])),
+      card('Flagged by the county as park land, not conservation', `${fmtNum(park.acreage_field_total)} ac`, `${plural(park.records.length)}${parkPrograms.length ? `, all ${parkPrograms.map(esc).join(', ')}` : ''} · counted above`),
+      card('Acquisitions layer, all records', `${fmtNum(a.acreage_field_total)} ac`, `${plural(a.records)} · $${fmtNum(a.total_investment / 1e6, 1)}M total investment`),
+    ].join('') +
+    '</div><h2 class="cards-h">By holding type</h2><div class="cards">' +
+    [
+      ...Object.keys(HOLDING_COLORS).map(typeCard),
+      ...other.map(typeCard),
+      card('Conservation land parcels', fmtNum(summary.conservation_lands.unique_parcels), 'parcel IDs, all public and private conservation owners'),
+    ].join('') +
+    '</div>';
+
+  const parkList = (list) => list.map((r) => `<li>${esc(r.name)} (${esc(r.program)}, ${fmtNum(r.acreage)} ac)${r.note ? `: ${esc(r.note)}` : ''}</li>`).join('');
   document.getElementById('summary-note').innerHTML =
     `Acreage is the county's <code>Acreage</code> field. The layer's <code>Acres</code> field (polygon area) totals ${fmtNum(a.acres_field_total)} ac; neither is surveyed acreage. ` +
-    `By program: ${programs}. ` +
-    `Computed from <a href="${esc(a.file)}">snapshot ${esc(summary.snapshot)}</a> of the <a href="${esc(a.source_url)}" rel="noopener">county acquisitions layer</a>.`;
+    `Park-land flags come from the layer's <code>PriorityArea</code> field as published. ` +
+    `Computed from <a href="${esc(a.file)}">snapshot ${esc(summary.snapshot)}</a> of the <a href="${esc(a.source_url)}" rel="noopener">county acquisitions layer</a>.` +
+    `<details><summary>Records flagged as park land</summary><ul>${parkList(park.records.map((r) => ({ ...r, note: '' })))}</ul>` +
+    (park.partly_flagged.length ? `<p>Partly flagged (not counted in the park total):</p><ul>${parkList(park.partly_flagged)}</ul>` : '') +
+    '</details>';
 
   document.getElementById('sources').innerHTML =
     'Sources: ' +

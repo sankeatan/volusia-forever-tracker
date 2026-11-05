@@ -11,6 +11,7 @@
     "diff": "node scripts/diff.ts",
     "build": "node scripts/build.ts",
     "update": "node scripts/fetch.ts && node scripts/diff.ts && node scripts/build.ts",
-    "serve": "node scripts/serve.ts"
+    "serve": "node scripts/serve.ts",
+    "test": "node --test scripts/*.test.ts"
   }
 }

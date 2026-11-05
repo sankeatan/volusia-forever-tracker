@@ -41,7 +41,11 @@ nav a:focus-visible, button:focus-visible, input:focus-visible, tr:focus-visible
 .card-label { font-size: 0.85rem; color: var(--muted); padding-right: 18px; }
 .card-value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
 .card-sub { font-size: 0.82rem; color: var(--muted); }
+.cards-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 16px 0 -6px; }
 .note { font-size: 0.85rem; color: var(--muted); margin: 4px 0 16px; }
+.note details { margin-top: 6px; }
+.note summary { cursor: pointer; color: var(--accent); }
+.note ul { margin: 4px 0; padding-left: 18px; }
 .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 
 /* Map */
@@ -87,6 +91,12 @@ table#table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 .kind-added { color: var(--ins); }
 .items { margin: 0; padding-left: 18px; }
 .items li { margin: 4px 0; overflow-wrap: anywhere; }
+.coverage { font-size: 0.85rem; color: var(--muted); }
+.cov-gone strong { color: var(--del); }
+.cov-new strong { color: var(--ins); }
+.callout { background: var(--warn-bg); border-left: 3px solid var(--warn-border); padding: 8px 12px; border-radius: 4px; font-size: 0.9rem; }
+.layer details { margin-top: 10px; }
+.layer summary { cursor: pointer; font-size: 0.9rem; font-weight: 600; }
 del { color: var(--del); }
 ins { color: var(--ins); text-decoration: none; }
 .empty { background: var(--surface); border: 1px dashed var(--border); border-radius: 10px; padding: 24px; text-align: center; color: var(--muted); }

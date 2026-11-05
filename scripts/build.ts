@@ -33,6 +33,15 @@ if (snapshot) {
     return out;
   };
   const sum = (field: string) => acq.features.reduce((s, f) => s + Number(f.properties[field] ?? 0), 0);
+  // The county marks some purchases in PriorityArea as park land rather than conservation land, either
+  // wholly (an exact phrase) or in part (free-text notes). Both are listed so the headline can set them apart.
+  const PARK_FLAG = 'Non-conservation land purchased for a park';
+  const flagged = (match: (v: string) => boolean) =>
+    acq.features
+      .filter((f) => match(String(f.properties.PriorityArea ?? '').trim()))
+      .map((f) => ({ name: f.properties.PropertyKnownAs, program: String(f.properties.FundProgram ?? '').trim(), acreage: f.properties.Acreage, note: String(f.properties.PriorityArea).trim() }));
+  const parkWhole = flagged((v) => v === PARK_FLAG);
+  const parkPart = flagged((v) => v !== PARK_FLAG && /non-conservation/i.test(v));
 
   await writeJson(join(DIST, 'data', 'summary.json'), {
     snapshot,
@@ -47,6 +56,11 @@ if (snapshot) {
       total_investment: sum('Total_Investment'),
       by_acquisition_type: tally(acq, 'AcquisitionType', 'Acreage'),
       by_fund_program: tally(acq, 'FundProgram', 'Acreage'),
+      park_flagged: {
+        acreage_field_total: parkWhole.reduce((t, r) => t + Number(r.acreage ?? 0), 0),
+        records: parkWhole,
+        partly_flagged: parkPart,
+      },
     },
     conservation_lands: {
       source_url: SOURCES.find((s) => s.name === 'conservation_lands')!.url,
