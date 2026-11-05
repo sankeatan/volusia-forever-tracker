@@ -71,6 +71,13 @@ table#table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 #table tbody tr { cursor: pointer; }
 #table tbody tr:hover { background: var(--accent-soft); }
 
+/* Glossary */
+.glossary { max-width: 72ch; }
+.glossary h3 { font-size: 1rem; margin: 18px 0 4px; }
+.glossary dl { margin: 0; }
+.glossary dt { font-weight: 600; margin-top: 10px; }
+.glossary dd { margin: 2px 0 0; }
+
 /* Change log */
 .entry { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 4px 16px 12px; margin: 16px 0; }
 .entry h2 { margin-top: 12px; }
