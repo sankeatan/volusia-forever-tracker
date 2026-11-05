@@ -1,0 +1,16 @@
+{
+  "name": "volusia-forever-tracker",
+  "private": true,
+  "type": "module",
+  "description": "Independent change tracker for Volusia County conservation lands.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch.ts",
+    "diff": "node scripts/diff.ts",
+    "build": "node scripts/build.ts",
+    "update": "node scripts/fetch.ts && node scripts/diff.ts && node scripts/build.ts",
+    "serve": "node scripts/serve.ts"
+  }
+}

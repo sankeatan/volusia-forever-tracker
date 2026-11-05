@@ -1,0 +1,5 @@
+node_modules/
+dist/
+data/snapshots/.tmp-*/
+.claude/settings.local.json
+.DS_Store

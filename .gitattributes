@@ -1,0 +1,2 @@
+# Snapshots are hashed byte-for-byte; keep LF everywhere so checkouts match manifests.
+* text=auto eol=lf

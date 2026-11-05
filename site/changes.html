@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change Log · Volusia Forever Tracker</title>
+  <meta name="description" content="Every detected change to Volusia County conservation land data, by date.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="./">Volusia Forever Tracker</a>
+      <nav><a href="./">Map</a><a href="changes.html" aria-current="page">Change log</a></nav>
+    </div>
+    <div class="wrap"><p id="status" class="status">Loading data status…</p></div>
+  </header>
+  <div id="banner" class="banner" role="alert" hidden></div>
+
+  <main class="wrap">
+    <h1>Change log</h1>
+    <p class="note">Each entry compares two daily snapshots of the county's published layers and lists records that were added, removed, or edited. Entries are generated automatically; nothing here is interpreted or editorialized.</p>
+    <div id="log"></div>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Independent project. Not affiliated with Volusia County.</p>
+  </footer>
+  <script type="module" src="changes.js"></script>
+</body>
+</html>
