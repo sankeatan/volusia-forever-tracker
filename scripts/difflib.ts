@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { IGNORED_FIELDS, RELOAD_FIELDS } from './sources.ts';
 import type { Source } from './sources.ts';
 import type { FeatureCollection } from './lib.ts';
+import { ownerChangeKind, ownerClass } from '../site/owners.js';
 
 type Props = Record<string, unknown>;
 type Piece = { props: Props; geom: string; geometry: unknown };
@@ -21,7 +22,8 @@ export type Coverage = {
   share: number | null;
   by: { key: string; label: string }[];
 };
-export type Entry = { key: string; label: string; acres: number | null; properties: Props[]; coverage: Coverage; geometry?: unknown[] };
+// Parcel lookups have no geometry, so their entries carry no coverage.
+export type Entry = { key: string; label: string; acres: number | null; properties: Props[]; coverage?: Coverage; geometry?: unknown[] };
 export type LayerDiff = {
   added: Entry[];
   removed: Entry[];
@@ -155,6 +157,12 @@ function classify(share: number | null, labels: [Coverage['status'], Coverage['s
   return share >= STILL_MAPPED ? labels[2] : share >= NOT_MAPPED ? labels[1] : labels[0];
 }
 
+// A change of owner class (county, other public, organization, individual) is the signal that land changed hands.
+function ownerChange({ from, to }: { from: unknown; to: unknown }) {
+  const kind = ownerChangeKind(from, to);
+  return kind ? { owner_change: { kind, from_class: ownerClass(from), to_class: ownerClass(to) } } : {};
+}
+
 // ---------- Layer diff ----------
 export function diffLayer(a: FeatureCollection, b: FeatureCollection, src: Source): LayerDiff {
   const fieldsBefore = fieldsOf(a), fieldsAfter = fieldsOf(b);
@@ -210,13 +218,13 @@ export function diffLayer(a: FeatureCollection, b: FeatureCollection, src: Sourc
   const afterIndex = index(after);
   const beforeIndex = index(before);
   const entry = (key: string, g: Group, others: Indexed[], labels: [Coverage['status'], Coverage['status'], Coverage['status']], keepGeometry: boolean): Entry => {
-    const c = coverage(g, others.filter((o) => o.key !== key));
+    const c = src.lookup ? null : coverage(g, others.filter((o) => o.key !== key));
     return {
       key,
       label: g.label,
       acres: acresOf(g),
       properties: g.pieces.map((p) => p.props),
-      coverage: { status: classify(c.share, labels), share: c.share, by: c.by.slice(0, 10) },
+      ...(c ? { coverage: { status: classify(c.share, labels), share: c.share, by: c.by.slice(0, 10) } } : {}),
       // Removed land is no longer in any published snapshot the site serves, so keep its outline here.
       ...(keepGeometry ? { geometry: g.pieces.map((p) => p.geometry) } : {}),
     };
@@ -232,7 +240,8 @@ export function diffLayer(a: FeatureCollection, b: FeatureCollection, src: Sourc
     const geometryChanged = geomKey(g) !== geomKey(next);
     if (g.pieces.length === 1 && next.pieces.length === 1) {
       const fields = fieldDiff(g.pieces[0].props, next.pieces[0].props, fieldSkip);
-      if (Object.keys(fields).length || geometryChanged) changed.push({ key, ...was, label: next.label, fields, geometry_changed: geometryChanged });
+      const owner = src.owner && fields[src.owner] ? ownerChange(fields[src.owner]) : {};
+      if (Object.keys(fields).length || geometryChanged) changed.push({ key, ...was, label: next.label, fields, geometry_changed: geometryChanged, ...owner });
     } else if (comparable(g, fieldSkip) !== comparable(next, fieldSkip)) {
       // Multipart record: report both versions whole rather than guess which piece became which.
       changed.push({

@@ -51,10 +51,20 @@ The brief didn't list this layer, and it's the important one. It's the layer des
 - `ACREAGE` is polygon acreage, not surveyed acreage (per the metadata page). It totals 279,690 across all owners, and 43,377 where `OWNER` contains "County of Volusia".
 - There is **no field marking a parcel as Volusia Forever.** `CONSERVE_NAME` and `ALIASNAME` sometimes match `PropertyKnownAs` in Acquisitions, but not reliably.
 
+### 5. Parcel ownership, tracked parcels only (`Open_Data_3/MapServer/34`)
+`https://maps5.vcgov.org/arcgis/rest/services/Open_Data/Open_Data_3/MapServer/34`
+
+Added 2026-11-05. This is the Property Appraiser's ownership roll. It's too big to snapshot whole, so the fetcher looks up only the parcels we track: every `PID` in Conservation Lands, plus every applicant `PropertyLocation` that is a 12-character parcel ID. That's about 4,060 parcels, sent as `PID IN (...)` POST queries in batches of 500, which takes about 2 seconds. Only these fields are kept, and no geometry: `PID, ALTKEY, OWNER1, OWNER2, PC, PC_DESC, LASTSALEDT, LASTSALEPRICE, CALCACRES`. The fetcher adds a `TRACKED_AS` field (`conservation`, `applicant`, or both) to each record.
+
+- Why: a deed reaches this roll before the conservation layer is redrawn, so a change in `OWNER1` is the earliest published sign that tracked land changed hands.
+- On the first run, every conservation `PID` was found on the roll. 3 applicant parcel IDs were not.
+- `OWNER1` is classed in `site/owners.js` as Volusia County, another public agency, a private organization, or a private individual. The patterns come from the owner names on file. A move from a public class to a private one is flagged in the change log as *left public ownership*. The reverse is flagged as *became public land*.
+- Private individuals' names stay in the raw snapshot in this repository but are masked on the site, like `OwnerName` in the Applicants layer. The raw ownership file isn't copied into the published site. Organization names (LLCs, corporations, nonprofits) are shown. A name counts as an organization only when it carries a legal-entity suffix or ends in a word like SOCIETY or CHURCH, so doubtful names are masked.
+
 ## Layers not snapshotted
 
 - `VolusiaForever/MapServer/0` "Conservation Acres" and `/1` "Conservation In Corridor": each is a single dissolved polygon (`GIS_Acres` 260,963 and 241,121). They're cheap to add later as a sanity metric.
-- `Open_Data_3/MapServer/36` "Parcels" (`PID, ALTKEY, PREFIX_, SUB, PCL, SUBNUM`) and `/34` "Parcel Ownership" (owner, sale, and value fields). These are useful for spatial joins and for ownership-change monitoring later. They're too big to snapshot whole.
+- `Open_Data_3/MapServer/36` "Parcels" (`PID, ALTKEY, PREFIX_, SUB, PCL, SUBNUM`). It's useful for spatial joins, but it's too big to snapshot whole. (`/34` "Parcel Ownership" is snapshotted for tracked parcels only; see above.)
 
 ## Join key decision
 

@@ -153,3 +153,28 @@ test('churn on only one side is not a reload', () => {
   const b = fc(feat({ PID: '1', NAME: 'A' }));
   assert.equal(diffLayer(a, b, src).reload, undefined);
 });
+
+const ownership: Source = { ...src, label: 'OWNER1', owner: 'OWNER1', lookup: { outFields: [] } };
+const owned = (pid: string, owner: string) => feat({ PID: pid, OWNER1: owner, ACRES: 5 }, null);
+
+test('county land sold to a private owner is flagged as leaving public ownership', () => {
+  const d = diffLayer(fc(owned('1', 'COUNTY OF VOLUSIA')), fc(owned('1', 'MIAMI ALTERNATIVES LLC')), ownership);
+  assert.deepEqual((d.changed[0] as any).owner_change, { kind: 'left_public', from_class: 'county', to_class: 'organization' });
+});
+
+test('private land bought by the county is flagged as becoming public', () => {
+  const d = diffLayer(fc(owned('1', 'SMITH JOHN TR')), fc(owned('1', 'COUNTY OF VOLUSIA')), ownership);
+  assert.equal((d.changed[0] as any).owner_change.kind, 'became_public');
+});
+
+test('a renamed owner in the same class is an edit without an owner-change flag', () => {
+  const d = diffLayer(fc(owned('1', 'ST JOHNS RIVER WATER MGMT DIST')), fc(owned('1', 'ST JOHNS RIVER WATER MANAGEMENT DISTRICT')), ownership);
+  assert.equal(d.changed.length, 1);
+  assert.equal((d.changed[0] as any).owner_change, undefined);
+});
+
+test('parcel lookups carry no coverage on added or removed records', () => {
+  const d = diffLayer(fc(owned('1', 'COUNTY OF VOLUSIA')), fc(owned('2', 'STATE OF FLORIDA')), ownership);
+  assert.equal(d.removed[0].coverage, undefined);
+  assert.equal(d.added[0].coverage, undefined);
+});
