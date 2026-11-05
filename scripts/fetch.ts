@@ -9,12 +9,14 @@ import { SNAPSHOTS, STATUS_FILE, readJson, todayET, writeFeatureCollection, writ
 import type { Feature, Status } from './lib.ts';
 
 const PAGE_SIZE = 1000;
+// Parcel IDs per lookup query, sent as a POST body because the IN list is too long for a URL.
+const LOOKUP_BATCH = 500;
 const USER_AGENT = 'volusia-forever-tracker (independent public conservation tracker)';
 
-async function getJson(url: string): Promise<any> {
+async function getJson(url: string, form?: URLSearchParams): Promise<any> {
   for (let attempt = 1; ; attempt++) {
     try {
-      const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(90_000) });
+      const res = await fetch(url, { method: form ? 'POST' : 'GET', body: form, headers: { 'User-Agent': USER_AGENT }, signal: AbortSignal.timeout(90_000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const body = await res.json();
       // ArcGIS reports query errors with HTTP 200 and an error object.
@@ -50,6 +52,43 @@ async function fetchLayer(src: Source): Promise<Feature[]> {
   return features.sort((a, b) => sortKey(a).localeCompare(sortKey(b)));
 }
 
+// Parcels we track: every conservation parcel, plus applicant parcels whose PropertyLocation holds a parcel ID.
+function trackedParcels(fetched: Record<string, Feature[]>) {
+  const tracked = new Map<string, Set<string>>();
+  const add = (pid: unknown, why: string) => {
+    const id = String(pid ?? '').trim();
+    if (/^[0-9A-Z]{12}$/.test(id)) (tracked.get(id) ?? tracked.set(id, new Set()).get(id)!).add(why);
+  };
+  for (const f of fetched.conservation_lands) add(f.properties.PID, 'conservation');
+  for (const f of fetched.vf_applicants) add(f.properties.PropertyLocation, 'applicant');
+  return tracked;
+}
+
+async function fetchLookup(src: Source, tracked: Map<string, Set<string>>): Promise<Feature[]> {
+  const pids = [...tracked.keys()].sort();
+  const features: Feature[] = [];
+  for (let i = 0; i < pids.length; i += LOOKUP_BATCH) {
+    const body = new URLSearchParams({
+      where: `PID IN (${pids.slice(i, i + LOOKUP_BATCH).map((p) => `'${p}'`).join(',')})`,
+      outFields: src.lookup!.outFields.join(','),
+      returnGeometry: 'false',
+      orderByFields: 'PID',
+      f: 'json',
+    });
+    const page = await getJson(`${src.url}/query`, body);
+    if (page.exceededTransferLimit) throw new Error(`${src.name}: lookup batch exceeded the transfer limit`);
+    for (const { attributes } of page.features) {
+      const why = [...(tracked.get(String(attributes.PID).trim()) ?? [])].sort().join(',');
+      features.push({ type: 'Feature', geometry: null, properties: { ...attributes, TRACKED_AS: why } });
+    }
+  }
+  // A parcel ID missing from the roll is worth knowing about (retired or re-platted), but it isn't a fetch failure.
+  const found = new Set(features.map((f) => String(f.properties.PID).trim()));
+  const missing = pids.filter((p) => !found.has(p));
+  if (missing.length) console.log(`${src.name}: ${missing.length} tracked parcel ID(s) not on the roll`);
+  return features.sort((a, b) => String(a.properties.PID).localeCompare(String(b.properties.PID)));
+}
+
 const date = todayET();
 const now = new Date().toISOString();
 const previous: Status | null = await readJson<Status>(STATUS_FILE).catch(() => null);
@@ -59,8 +98,10 @@ try {
   await rm(tmp, { recursive: true, force: true });
   await mkdir(tmp, { recursive: true });
   const layers: Record<string, unknown> = {};
+  const fetched: Record<string, Feature[]> = {};
   for (const src of SOURCES) {
-    const features = await fetchLayer(src);
+    const features = src.lookup ? await fetchLookup(src, trackedParcels(fetched)) : await fetchLayer(src);
+    fetched[src.name] = features;
     const file = join(tmp, `${src.name}.geojson`);
     await writeFeatureCollection(file, { type: 'FeatureCollection', features });
     const sha256 = createHash('sha256').update(await readFile(file)).digest('hex');

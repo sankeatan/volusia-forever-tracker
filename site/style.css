@@ -94,6 +94,9 @@ table#table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 .coverage { font-size: 0.85rem; color: var(--muted); }
 .cov-gone strong { color: var(--del); }
 .cov-new strong { color: var(--ins); }
+.owner-change { font-size: 0.85rem; }
+.oc-left_public strong { color: var(--del); }
+.oc-became_public strong { color: var(--ins); }
 .callout { background: var(--warn-bg); border-left: 3px solid var(--warn-border); padding: 8px 12px; border-radius: 4px; font-size: 0.9rem; }
 .layer details { margin-top: 10px; }
 .layer summary { cursor: pointer; font-size: 0.9rem; font-weight: 600; }

@@ -1,6 +1,6 @@
 // Assemble dist/ for static hosting: the site, the latest snapshot, a summary, the change log and status.
 import { cp, readdir, rm } from 'node:fs/promises';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 import { SOURCES } from './sources.ts';
 import { CHANGES, ROOT, SNAPSHOTS, STATUS_FILE, readJson, writeJson } from './lib.ts';
 import type { FeatureCollection, Status } from './lib.ts';
@@ -15,7 +15,10 @@ await writeJson(join(DIST, 'data', 'status.json'), status ?? { ok: false, errors
 
 if (snapshot) {
   const snapshotPath = `data/snapshots/${snapshot}`;
-  await cp(join(SNAPSHOTS, snapshot), join(DIST, snapshotPath), { recursive: true });
+  // Parcel lookups hold private individuals' names, which the site masks; the raw file stays in the repo
+  // history but isn't published with the site.
+  const unpublished = new Set(SOURCES.filter((s) => s.lookup).map((s) => `${s.name}.geojson`));
+  await cp(join(SNAPSHOTS, snapshot), join(DIST, snapshotPath), { recursive: true, filter: (from) => !unpublished.has(basename(from)) });
 
   const acqSource = SOURCES.find((s) => s.name === 'vf_acquisitions')!;
   const acq = await readJson<FeatureCollection>(join(SNAPSHOTS, snapshot, `${acqSource.name}.geojson`));
@@ -46,7 +49,9 @@ if (snapshot) {
   await writeJson(join(DIST, 'data', 'summary.json'), {
     snapshot,
     snapshot_path: snapshotPath,
-    layers: Object.fromEntries(SOURCES.map((s) => [s.name, { title: s.title, file: `${snapshotPath}/${s.name}.geojson`, source_url: s.url }])),
+    layers: Object.fromEntries(
+      SOURCES.map((s) => [s.name, { title: s.title, file: s.lookup ? null : `${snapshotPath}/${s.name}.geojson`, source_url: s.url }]),
+    ),
     acquisitions: {
       source_url: acqSource.url,
       file: `${snapshotPath}/${acqSource.name}.geojson`,

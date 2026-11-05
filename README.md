@@ -3,7 +3,7 @@
 An independent public tracker for Volusia County conservation lands. Charter Amendment 5 (2026) creates a conservation land registry. This project snapshots the county's published GIS data every day, records every change, and puts it on a mobile-friendly map. The goal is to make additions, removals, and changes in use easy to see.
 
 - **Map**: Volusia Forever acquisitions by holding type, plus toggleable layers for conservation parcels, priority projects, and applicants.
-- **Change log**: every record added, removed, or edited between daily snapshots.
+- **Change log**: every record added, removed, or edited between daily snapshots, with ownership changes on tracked parcels flagged when land leaves or enters public hands.
 - **Audit trail**: snapshots and change files are committed to this repository, so git history shows what the county published on each day.
 
 See [docs/data-sources.md](docs/data-sources.md) for the layers and join keys and [docs/methodology.md](docs/methodology.md) for how updates work.

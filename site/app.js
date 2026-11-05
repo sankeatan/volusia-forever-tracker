@@ -116,7 +116,7 @@ function renderSummary() {
 
   document.getElementById('sources').innerHTML =
     'Sources: ' +
-    Object.values(summary.layers).map((l) => `<a href="${esc(l.source_url)}" rel="noopener">${esc(l.title)}</a> (<a href="${esc(l.file)}">snapshot</a>)`).join(' · ');
+    Object.values(summary.layers).map((l) => `<a href="${esc(l.source_url)}" rel="noopener">${esc(l.title)}</a> ${l.file ? ` (<a href="${esc(l.file)}">snapshot</a>)` : ''}`).join(' · ');
 }
 
 // ---------- Data loading ----------
