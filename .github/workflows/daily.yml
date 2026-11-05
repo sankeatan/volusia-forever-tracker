@@ -17,9 +17,8 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+    outputs:
+      fetch: ${{ steps.fetch.outcome }}
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +26,7 @@ jobs:
         with:
           node-version: 24
 
-      # A failed fetch still deploys, so the site shows its stale-data banner; the job fails at the end.
+      # A failed fetch still builds and deploys, so the site shows its stale-data banner.
       - name: Fetch county layers
         id: fetch
         continue-on-error: true
@@ -48,15 +47,29 @@ jobs:
           git diff --cached --quiet || git commit -m "data: snapshot $(TZ=America/New_York date +%F)"
           git push
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      # Deploying is opt-in: set the repo variable DEPLOY_PAGES=true once Pages is enabled.
+      - if: vars.DEPLOY_PAGES == 'true'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
+  deploy:
+    needs: update
+    if: always() && needs.update.result == 'success' && vars.DEPLOY_PAGES == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
       - id: deploy
         uses: actions/deploy-pages@v4
 
-      - name: Report fetch failure
-        if: steps.fetch.outcome != 'success'
-        run: |
-          echo "::error::County data fetch failed; site is showing the stale-data banner."
+  report:
+    needs: [update, deploy]
+    if: always() && needs.update.outputs.fetch != 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::error::County data fetch failed; the site is showing the stale-data banner."
           exit 1

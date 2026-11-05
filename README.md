@@ -34,7 +34,7 @@ docs/           data-sources.md, methodology.md
 
 ## Deploy
 
-Push to GitHub, then set **Settings → Pages → Source** to **GitHub Actions**. The daily workflow fetches, diffs, commits, and deploys. Run it once by hand from the Actions tab.
+The daily workflow always fetches, diffs, and commits. Deploying is opt-in. To turn it on, set **Settings → Pages → Source** to **GitHub Actions** (free accounts need a public repo for this). Then add the repository variable `DEPLOY_PAGES` = `true` under **Settings → Secrets and variables → Actions → Variables**. Run the workflow once by hand from the Actions tab.
 
 ## Roadmap
 
