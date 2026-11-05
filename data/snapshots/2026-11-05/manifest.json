@@ -1,6 +1,6 @@
 {
   "date": "2026-11-05",
-  "fetched_at": "2026-11-05T18:49:32.918Z",
+  "fetched_at": "2026-11-05T21:28:40.684Z",
   "layers": {
     "vf_acquisitions": {
       "title": "Volusia Forever Acquisitions",
@@ -29,6 +29,13 @@
       "key": "PID",
       "count": 3841,
       "sha256": "d4336c25220bdcb164212577fccf732472c41739f2bd38e56b04406bdbd2d57e"
+    },
+    "parcel_ownership": {
+      "title": "Parcel ownership (tracked parcels)",
+      "source_url": "https://maps5.vcgov.org/arcgis/rest/services/Open_Data/Open_Data_3/MapServer/34",
+      "key": "PID",
+      "count": 4058,
+      "sha256": "0b9cf274df02b1ef1ca92aafa3190b9fe2c6580d1f3d11762b2de596e1f099d6"
     }
   }
 }
