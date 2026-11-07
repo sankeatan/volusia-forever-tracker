@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-07",
+  "fetched_at": "2026-11-07T16:53:13.694Z",
+  "layers": {
+    "vf_acquisitions": {
+      "title": "Volusia Forever Acquisitions",
+      "source_url": "https://maps5.vcgov.org/arcgis/rest/services/Resource_Stewardship/VolusiaForever/MapServer/2",
+      "key": "GlobalID",
+      "count": 92,
+      "sha256": "8930405ce0b5a9809953b6292886b7fd5aede1b7e7024d82d4c192d4d0797196"
+    },
+    "vf_applicants": {
+      "title": "Volusia Forever Applicants",
+      "source_url": "https://maps5.vcgov.org/arcgis/rest/services/Resource_Stewardship/VolusiaForever/MapServer/3",
+      "key": "GlobalID",
+      "count": 466,
+      "sha256": "ad73ec7539f2b536514e89ca108aeaa2fde340acd2d69717087afb3d871a6904"
+    },
+    "vf_priority_projects": {
+      "title": "Volusia Forever Priority Projects",
+      "source_url": "https://maps5.vcgov.org/arcgis/rest/services/Resource_Stewardship/VolusiaForever/MapServer/4",
+      "key": "GlobalID",
+      "count": 35,
+      "sha256": "a757ac21692677ffe365aa9cc90758ddbac5584fa82cac645a554b115f0d82b0"
+    },
+    "conservation_lands": {
+      "title": "Conservation Lands (parcels)",
+      "source_url": "https://maps5.vcgov.org/arcgis/rest/services/Open_Data/Open_Data_2/MapServer/2",
+      "key": "PID",
+      "count": 3841,
+      "sha256": "d4336c25220bdcb164212577fccf732472c41739f2bd38e56b04406bdbd2d57e"
+    },
+    "parcel_ownership": {
+      "title": "Parcel ownership (tracked parcels)",
+      "source_url": "https://maps5.vcgov.org/arcgis/rest/services/Open_Data/Open_Data_3/MapServer/34",
+      "key": "PID",
+      "count": 4058,
+      "sha256": "0b9cf274df02b1ef1ca92aafa3190b9fe2c6580d1f3d11762b2de596e1f099d6"
+    }
+  }
+}
