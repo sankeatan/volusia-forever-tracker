@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-09",
+  "compared": {
+    "from": "2026-11-08",
+    "to": "2026-11-09"
+  },
+  "total": 1,
+  "layers": {
+    "parcel_ownership": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "key": "713156000130",
+          "label": "TIGHE SHARON KIRCHER",
+          "fields": {
+            "OWNER1": {
+              "from": "KIRCHER GEORGE R",
+              "to": "TIGHE SHARON KIRCHER"
+            }
+          },
+          "geometry_changed": false
+        }
+      ],
+      "rekeyed": []
+    }
+  }
+}
