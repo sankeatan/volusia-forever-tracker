@@ -1,0 +1,786 @@
+{
+  "date": "2026-11-15",
+  "compared": {
+    "from": "2026-11-14",
+    "to": "2026-11-15"
+  },
+  "total": 59,
+  "layers": {
+    "conservation_lands": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "key": "711401000780",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "ECHO_Map": {
+              "from": "Yes",
+              "to": "No"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "711401000790",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "ECHO_Map": {
+              "from": "Yes",
+              "to": "No"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "711401000850",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "ECHO_Map": {
+              "from": "Yes",
+              "to": "No"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "711401000860",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "ECHO_Map": {
+              "from": "Yes",
+              "to": "No"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "840900000060",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "841600000020",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "841600000030",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "841600000050",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "843900000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "843900000011",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "843900000040",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "ECHO_Map": {
+              "from": null,
+              "to": "No"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844000000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844000000011",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844100000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000060",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000070",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000135",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000140",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000141",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000151",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000152",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000155",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "84430100015D",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "84430100015E",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "84430100015F",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "84430100015G",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "84430100015H",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "84430100015I",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000170",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000290",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000293",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000360",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000710",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301000900",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001080",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001340",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001420",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001550",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001560",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001611",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001740",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001810",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001820",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844301001940",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000020",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000030",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000040",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000100",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000110",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000120",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000130",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302000140",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302001430",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844302001920",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "844601000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "845200000010",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "845200000015",
+          "label": "Turnbull Hammock Conservation Area",
+          "fields": {
+            "CONSERVE_NAME": {
+              "from": null,
+              "to": "Turnbull Hammock Conservation Area"
+            },
+            "URL": {
+              "from": null,
+              "to": "https://aws.sjrwmd.com/SJRWMD/lands/management/plans/2022-Turnbull-Hammock-LMP.pdf"
+            }
+          },
+          "geometry_changed": false
+        }
+      ],
+      "rekeyed": []
+    }
+  }
+}
