@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-16",
+  "compared": {
+    "from": "2026-11-15",
+    "to": "2026-11-16"
+  },
+  "total": 2,
+  "layers": {
+    "parcel_ownership": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "key": "631300020291",
+          "label": "KRAJEWSKI DEREK J",
+          "fields": {
+            "LASTSALEDT": {
+              "from": 1717646400000,
+              "to": 1780027200000
+            },
+            "LASTSALEPRICE": {
+              "from": 54000,
+              "to": 25000
+            }
+          },
+          "geometry_changed": false
+        },
+        {
+          "key": "823000000013",
+          "label": "",
+          "fields": {
+            "LASTSALEDT": {
+              "from": 782193600000,
+              "to": 1792987200000
+            }
+          },
+          "geometry_changed": false
+        }
+      ],
+      "rekeyed": []
+    }
+  }
+}
