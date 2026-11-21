@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-21",
+  "compared": {
+    "from": "2026-11-19",
+    "to": "2026-11-21"
+  },
+  "total": 10,
+  "layers": {
+    "conservation_lands": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "key": "372200000010",
+          "label": "Lake George Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 12657776.46301102,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 290.58372576,
+              "to": 290.58256343
+            },
+            "Shape.STArea()": {
+              "from": 12657683.307429,
+              "to": 12657776.463011
+            },
+            "Shape.STLength()": {
+              "from": 15420.826131367621,
+              "to": 15420.826702293938
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "372700000010",
+          "label": "Lake George Conservation Area",
+          "fields": {
+            "ACREAGE": {
+              "from": 260.28643177,
+              "to": 260.28539062
+            },
+            "Shape.STArea()": {
+              "from": 11337870.516639,
+              "to": 11338031.615495
+            },
+            "Shape.STLength()": {
+              "from": 22761.2726541823,
+              "to": 22761.274101068375
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "372800000010",
+          "label": "Lake George Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 1891682.18049843,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 43.42722101,
+              "to": 43.4270473
+            },
+            "Shape.STArea()": {
+              "from": 1891637.5851145,
+              "to": 1891682.1804985
+            },
+            "Shape.STLength()": {
+              "from": 6159.696577758434,
+              "to": 6160.251882859083
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "373900000010",
+          "label": "Lake George Conservation Area",
+          "fields": {
+            "ACREAGE": {
+              "from": 296.10830438,
+              "to": 296.10711995
+            },
+            "Shape.STArea()": {
+              "from": 12897998.4661855,
+              "to": 12898426.1450245
+            },
+            "Shape.STLength()": {
+              "from": 15133.997106964061,
+              "to": 15134.334241176546
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "682100000010",
+          "label": "Lake Woodruff National Wildlife Refuge",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 2599806.03747497,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 59.68357293,
+              "to": 59.68333446
+            },
+            "Shape.STArea()": {
+              "from": 2599706.700449,
+              "to": 2599806.049085
+            },
+            "Shape.STLength()": {
+              "from": 8888.165100806797,
+              "to": 8888.19909219804
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "682200000010",
+          "label": "Lake Woodruff National Wildlife Refuge",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 6355804.02428864,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 145.90976693,
+              "to": 145.90917971
+            },
+            "Shape.STArea()": {
+              "from": 6355710.3716085,
+              "to": 6355803.868243
+            },
+            "Shape.STLength()": {
+              "from": 15556.588426218404,
+              "to": 15556.674275216605
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "790400000010",
+          "label": "Lake Woodruff National Wildlife Refuge",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 20653475.96547376,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 474.14046326,
+              "to": 474.13858805
+            },
+            "Shape.STArea()": {
+              "from": 20653679.6201445,
+              "to": 20653476.895421
+            },
+            "Shape.STLength()": {
+              "from": 41180.4566099323,
+              "to": 41194.23128412438
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "790500000010",
+          "label": "Lake Woodruff National Wildlife Refuge",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 15304135.33757631,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 351.33600905,
+              "to": 351.33459697
+            },
+            "Shape.STArea()": {
+              "from": 15303926.316213,
+              "to": 15304135.0439115
+            },
+            "Shape.STLength()": {
+              "from": 19584.23081279759,
+              "to": 19587.87739846215
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "794000000030",
+          "label": "Lake Woodruff National Wildlife Refuge",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 24753998.62713125,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 568.27588713,
+              "to": 568.2736
+            },
+            "Shape.STArea()": {
+              "from": 24753845.711895,
+              "to": 24753998.0158485
+            },
+            "Shape.STLength()": {
+              "from": 68188.93086789103,
+              "to": 68203.32332482487
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "794000000040",
+          "label": "Lake Woodruff National Wildlife Refuge",
+          "fields": {
+            "ConservationArea": {
+              "from": 14492316.66288834,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 332.69914216,
+              "to": 332.69781136
+            },
+            "Shape.STArea()": {
+              "from": 14492383.071805,
+              "to": 14492316.6628885
+            },
+            "Shape.STLength()": {
+              "from": 37974.70554064099,
+              "to": 37993.58754830337
+            }
+          },
+          "geometry_changed": true
+        }
+      ],
+      "rekeyed": []
+    }
+  }
+}
