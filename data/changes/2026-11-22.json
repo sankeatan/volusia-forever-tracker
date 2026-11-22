@@ -1,0 +1,723 @@
+{
+  "date": "2026-11-22",
+  "compared": {
+    "from": "2026-11-21",
+    "to": "2026-11-22"
+  },
+  "total": 26,
+  "layers": {
+    "conservation_lands": {
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "key": "010100000010",
+          "label": "Lake Monroe Conservation Area",
+          "fields": {
+            "ACREAGE": {
+              "from": 45.60877643,
+              "to": 42.03454553
+            },
+            "Shape.STArea()": {
+              "from": 1986718.301353,
+              "to": 1831046.49225
+            },
+            "Shape.STLength()": {
+              "from": 20590.833162660663,
+              "to": 16313.389090842118
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "030300000109",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 110011.26133652,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.52550172,
+              "to": 2.51565543
+            },
+            "Shape.STArea()": {
+              "from": 110010.8547125,
+              "to": 109581.9505
+            },
+            "Shape.STLength()": {
+              "from": 1328.3609456151041,
+              "to": 1324.788792537986
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "030300000118",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ConservationArea": {
+              "from": 110293.756596,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.53209793,
+              "to": 2.52018065
+            },
+            "Shape.STArea()": {
+              "from": 110298.1858155,
+              "to": 109779.06895
+            },
+            "Shape.STLength()": {
+              "from": 1330.3743592347662,
+              "to": 1326.3033869804642
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031000000048",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 109101.82828552,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.50477617,
+              "to": 2.57459157
+            },
+            "Shape.STArea()": {
+              "from": 109108.050161,
+              "to": 112149.20875
+            },
+            "Shape.STLength()": {
+              "from": 1321.3155492758578,
+              "to": 1339.6221055710282
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031000000053",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 112702.50679001,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.58725622,
+              "to": 2.61488032
+            },
+            "Shape.STArea()": {
+              "from": 112700.881008,
+              "to": 113904.1868
+            },
+            "Shape.STLength()": {
+              "from": 1342.419279284786,
+              "to": 1350.1935002691569
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031000000069",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ALIASNAME": {
+              "from": " ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 111327.14948855,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.55569172,
+              "to": 2.63780621
+            },
+            "Shape.STArea()": {
+              "from": 111325.9315055,
+              "to": 114902.8384
+            },
+            "Shape.STLength()": {
+              "from": 1334.7505951750027,
+              "to": 1356.2456023643763
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031000000081",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ConservationArea": {
+              "from": 111369.64117852,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.55641512,
+              "to": 2.53807289
+            },
+            "Shape.STArea()": {
+              "from": 111357.442727,
+              "to": 110558.45495
+            },
+            "Shape.STLength()": {
+              "from": 1334.9494325934527,
+              "to": 1330.0620103739323
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031000000170",
+          "label": "Small Lot Acquisition",
+          "fields": {
+            "ALIASNAME": {
+              "from": "             ",
+              "to": null
+            },
+            "ConservationArea": {
+              "from": 112413.79068003,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 2.58068683,
+              "to": 2.63891476
+            },
+            "Shape.STArea()": {
+              "from": 112414.718414,
+              "to": 114951.1271
+            },
+            "Shape.STLength()": {
+              "from": 1341.3243562974926,
+              "to": 1356.475078540021
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031400000010",
+          "label": "Double Eagle",
+          "fields": {
+            "MANAGER": {
+              "from": "Private",
+              "to": "Private "
+            },
+            "ACREAGE": {
+              "from": 272.48505446,
+              "to": 270.21400194
+            },
+            "Shape.STArea()": {
+              "from": 11869448.972141,
+              "to": 11770521.92455
+            },
+            "Shape.STLength()": {
+              "from": 15521.535314568377,
+              "to": 15431.213189530597
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "031400000030",
+          "label": "Double Eagle",
+          "fields": {
+            "MANAGER": {
+              "from": "Private",
+              "to": "Private "
+            },
+            "ACREAGE": {
+              "from": 121.29369273,
+              "to": 123.84343606
+            },
+            "Shape.STArea()": {
+              "from": 5283553.2551435,
+              "to": 5394620.0746
+            },
+            "Shape.STLength()": {
+              "from": 10602.62729731721,
+              "to": 10740.371437854992
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "032200000020",
+          "label": "Double Eagle",
+          "fields": {
+            "MANAGER": {
+              "from": "Private",
+              "to": "Private "
+            },
+            "ACREAGE": {
+              "from": 27.5824071,
+              "to": 32.93563833
+            },
+            "Shape.STArea()": {
+              "from": 1201489.6532475,
+              "to": 1434676.40575
+            },
+            "Shape.STLength()": {
+              "from": 7065.775518745658,
+              "to": 7137.49986185956
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "032300000010",
+          "label": "Double Eagle",
+          "fields": {
+            "MANAGER": {
+              "from": "Private",
+              "to": "Private "
+            },
+            "ACREAGE": {
+              "from": 549.8283316,
+              "to": 531.17674746
+            },
+            "Shape.STArea()": {
+              "from": 23950522.124278,
+              "to": 23138059.1194
+            },
+            "Shape.STLength()": {
+              "from": 25199.57594291852,
+              "to": 24962.123035706732
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "032800000040",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 264382.09911895,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 6.06940213,
+              "to": 6.43341384
+            },
+            "Shape.STArea()": {
+              "from": 264382.029632,
+              "to": 280239.5068
+            },
+            "Shape.STLength()": {
+              "from": 2947.598471960951,
+              "to": 3023.7743299314193
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "032800000060",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 5617956.83910816,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 128.97105856,
+              "to": 129.90211637
+            },
+            "Shape.STArea()": {
+              "from": 5618023.2913015,
+              "to": 5658536.18905
+            },
+            "Shape.STLength()": {
+              "from": 10461.643527806045,
+              "to": 10540.006924382209
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "032900000030",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ACREAGE": {
+              "from": 21.2531911,
+              "to": 19.8142426
+            },
+            "Shape.STArea()": {
+              "from": 927138.437498,
+              "to": 864456.8274
+            },
+            "Shape.STLength()": {
+              "from": 11612.152048486136,
+              "to": 11273.033111402456
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033200000020",
+          "label": "Seminole Ranch Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 836163.73404259,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 19.19575479,
+              "to": 16.93599259
+            },
+            "Shape.STArea()": {
+              "from": 835995.246705,
+              "to": 737731.83725
+            },
+            "Shape.STLength()": {
+              "from": 10506.299277348346,
+              "to": 9803.505060787926
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033300000010",
+          "label": "Seminole Ranch Conservation Area",
+          "pieces_before": [
+            {
+              "PID": "033300000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Buck Lake Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/18/1993",
+              "ConservationArea": 752576.4065161,
+              "ACREAGE": 17.27684612,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/buck-lake/",
+              "Shape.STArea()": 752576.406516,
+              "Shape.STLength()": 4192.381020627451
+            },
+            {
+              "PID": "033300000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Seminole Ranch Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/01/1993",
+              "ConservationArea": 4487454.50600688,
+              "ACREAGE": 103.01819228,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/seminole-ranch/",
+              "Shape.STArea()": 4487490.732161,
+              "Shape.STLength()": 16464.26255322881
+            }
+          ],
+          "pieces_after": [
+            {
+              "PID": "033300000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Buck Lake Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/18/1993",
+              "ConservationArea": null,
+              "ACREAGE": 18.86776496,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/buck-lake/",
+              "Shape.STArea()": 821879.841771,
+              "Shape.STLength()": 4387.765169380187
+            },
+            {
+              "PID": "033300000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Seminole Ranch Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/18/1993",
+              "ConservationArea": null,
+              "ACREAGE": 105.03167806,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/seminole-ranch/",
+              "Shape.STArea()": 4575179.8965,
+              "Shape.STLength()": 16637.663996141073
+            }
+          ],
+          "geometry_changed": true
+        },
+        {
+          "key": "033300000020",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ACREAGE": {
+              "from": 144.07964744,
+              "to": 142.92576624
+            },
+            "Shape.STArea()": {
+              "from": 6294339.780896,
+              "to": 6251600.64155
+            },
+            "Shape.STLength()": {
+              "from": 22747.75325963125,
+              "to": 22875.09258458068
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033300000040",
+          "label": "Seminole Ranch Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 2239916.55788714,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 51.42161427,
+              "to": 52.45481835
+            },
+            "Shape.STArea()": {
+              "from": 2239822.151275,
+              "to": 2270463.21635
+            },
+            "Shape.STLength()": {
+              "from": 6710.810769026071,
+              "to": 6766.7472089924295
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033300000050",
+          "label": "Seminole Ranch Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 1812601.24909043,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 41.61176537,
+              "to": 41.53329909
+            },
+            "Shape.STArea()": {
+              "from": 1812488.692022,
+              "to": 1809190.50855
+            },
+            "Shape.STLength()": {
+              "from": 10586.630568118224,
+              "to": 10711.302679976605
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033300000060",
+          "label": "Seminole Ranch Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 1662474.86877002,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 38.16532412,
+              "to": 37.9500613
+            },
+            "Shape.STArea()": {
+              "from": 1662447.934184,
+              "to": 1653104.67025
+            },
+            "Shape.STLength()": {
+              "from": 5564.000170534377,
+              "to": 6102.117722980743
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033300000080",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 1232009.74351894,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 28.2831651,
+              "to": 29.01374457
+            },
+            "Shape.STArea()": {
+              "from": 1232029.1090605,
+              "to": 1263799.94055
+            },
+            "Shape.STLength()": {
+              "from": 5010.163123072717,
+              "to": 5106.179048196393
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033400000010",
+          "label": "Buck Lake Conservation Area",
+          "pieces_before": [
+            {
+              "PID": "033400000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Buck Lake Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/01/1993",
+              "ConservationArea": 26206264.88986908,
+              "ACREAGE": 601.61546637,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/buck-lake/",
+              "Shape.STArea()": 26206266.362353,
+              "Shape.STLength()": 20018.69402618028
+            },
+            {
+              "PID": "033400000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Seminole Ranch Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/18/1993",
+              "ConservationArea": 873945.74991688,
+              "ACREAGE": 20.063114,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/seminole-ranch/",
+              "Shape.STArea()": 873945.749917,
+              "Shape.STLength()": 4530.006963881228
+            }
+          ],
+          "pieces_after": [
+            {
+              "PID": "033400000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Buck Lake Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/01/1993",
+              "ConservationArea": 26206264.88986908,
+              "ACREAGE": 604.54850453,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/buck-lake/",
+              "Shape.STArea()": 26334132.857475,
+              "Shape.STLength()": 20099.333141389587
+            },
+            {
+              "PID": "033400000010",
+              "OWNER": "SJRWMD",
+              "MANAGER": "SJRWMD",
+              "CONSERVE_NAME": "Seminole Ranch Conservation Area",
+              "USECODE": "Public Conservation Land",
+              "ALIASNAME": "Lansing et al",
+              "DATE_ACQUIRED": "03/18/1993",
+              "ConservationArea": 873945.74991688,
+              "ACREAGE": 18.98846963,
+              "Acquisition_Area": "Florida Wildlife Corridor",
+              "ECHO_Map": "Yes",
+              "URL": "https://www.sjrwmd.com/lands/recreation/seminole-ranch/",
+              "Shape.STArea()": 827137.73715,
+              "Shape.STLength()": 4407.729234647562
+            }
+          ],
+          "geometry_changed": true
+        },
+        {
+          "key": "033500000010",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 23551088.46591787,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 540.6607592,
+              "to": 547.7741585
+            },
+            "Shape.STArea()": {
+              "from": 23551432.204606,
+              "to": 23861042.34425
+            },
+            "Shape.STLength()": {
+              "from": 20817.12211853396,
+              "to": 20907.15471204086
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033500000020",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 3504475.7916575,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 80.45201583,
+              "to": 78.84213433
+            },
+            "Shape.STArea()": {
+              "from": 3504487.2580015,
+              "to": 3434363.3715
+            },
+            "Shape.STLength()": {
+              "from": 7950.086792227357,
+              "to": 7810.532531167832
+            }
+          },
+          "geometry_changed": true
+        },
+        {
+          "key": "033600000010",
+          "label": "Buck Lake Conservation Area",
+          "fields": {
+            "ConservationArea": {
+              "from": 3750136.38977737,
+              "to": null
+            },
+            "ACREAGE": {
+              "from": 86.09162971,
+              "to": 73.50685603
+            },
+            "Shape.STArea()": {
+              "from": 3750110.495971,
+              "to": 3201958.64865
+            },
+            "Shape.STLength()": {
+              "from": 11656.353920205751,
+              "to": 11574.736258051642
+            }
+          },
+          "geometry_changed": true
+        }
+      ],
+      "rekeyed": []
+    }
+  }
+}
